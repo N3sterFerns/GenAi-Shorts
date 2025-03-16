@@ -22,7 +22,7 @@ const Header = () => {
         <div>
           {!user? (
             <Authentication>
-              <Button>Get Started</Button>
+              <Button className={"cursor-pointer"}>Get Started</Button>
             </Authentication>
           ): (
           <div className='flex gap-2 items-center'>

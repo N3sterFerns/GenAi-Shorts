@@ -8,11 +8,11 @@ export const styles = [
     },
     {
         name: "Cinematic",
-        image: "/images/realistic.png"
+        image: "/images/cinematic.png"
     },
     {
         name: "Cartoon",
-        image: "/images/realistic.jpeg"
+        image: "/images/cartoon.png"
     },
 ]
 

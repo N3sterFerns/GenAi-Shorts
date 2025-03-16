@@ -7,10 +7,12 @@ import { AuthContext } from './_context/AuthContext'
 import { useMutation } from "convex/react";
 import ClientConvexProvider from './ClientConvexProvider'
 import { api } from '@/convex/_generated/api'
+import { useRouter } from 'next/navigation'
 
 const Provider = ({children}) => {
 
   const [user, setUser] = useState(null)
+  const router = useRouter()
 
   const createUser = useMutation(api.users.CreateNewUser);
 
@@ -24,6 +26,7 @@ const Provider = ({children}) => {
           picURL: user?.photoURL,
         })
         setUser(createUserAcc)
+        router.push("/dashboard")
       }
       
     })
