@@ -34,6 +34,7 @@ const VideoInfo = ({videoData}) => {
         <Link href={url}>
           <Button disabled={!downloadStatus} className={`mt-3 w-full cursor-pointer `}>{downloadStatus ? <><DownloadIcon/> <span>Download Video</span></>: <> <Loader2Icon className='animate-spin'/><span>Processing Video</span></>}</Button>
         </Link>
+        <h3 className={`text-sm text-gray-500 mt-2 ${downloadStatus ? "hidden": "block"}`}>Processing might take 2/5 mins</h3>
       </div>
     </div>
   )
